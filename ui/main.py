@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '.\main.ui',
 # licensing of '.\main.ui' applies.
 #
-# Created: Fri May 28 17:03:44 2021
+# Created: Tue Jun  1 16:02:18 2021
 #      by: pyside2-uic  running on PySide2 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -1529,6 +1529,12 @@ class Ui_MainWindow(object):
 "color: rgb(129, 161, 193);\n"
 "background-color: rgb(76, 86, 106);")
         self.refresh_button.setObjectName("refresh_button")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(340, 580, 111, 41))
+        self.pushButton.setStyleSheet("font: 25 16pt \"Bahnschrift Light Condensed\";\n"
+"color: rgb(129, 161, 193);\n"
+"background-color: rgb(76, 86, 106);")
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 811, 21))
@@ -1591,5 +1597,6 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtWidgets.QApplication.translate("MainWindow", "Edit Inventory", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("MainWindow", "Part Inventory Manager", None, -1))
         self.refresh_button.setText(QtWidgets.QApplication.translate("MainWindow", "Refresh", None, -1))
+        self.pushButton.setText(QtWidgets.QApplication.translate("MainWindow", "Set Config", None, -1))
 
 # import res_1_rc

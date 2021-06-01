@@ -9,11 +9,38 @@ x = 0
 idx = 2
 
 
+class Config:
+    def __init__(self):
+        self._x = 5
+        self._y = 10
+
+    def __str__(self):
+        return "HELLO WORLD"
+
+    @property
+    def x(self):
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        self.x = value
+
+    @property
+    def y(self):
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        self.y = value
+
+
 class MainWindow(QMainWindow, main_window.Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
 
         self.setupUi(self)
+
+        self.configure = Config
 
         # Stretch table 2 to fill the space
         self.table_2.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
@@ -33,6 +60,7 @@ class MainWindow(QMainWindow, main_window.Ui_MainWindow):
         self.previous_button.clicked.connect(self.previous_entry)
         self.last_button.clicked.connect(self.last_entry)
         self.first_button.clicked.connect(self.first_entry)
+        self.pushButton.clicked.connect(self.set_config)
 
     def get_data(self):
         # Connect to Sqlite3 database and fill GUI table with data.
@@ -298,6 +326,12 @@ class MainWindow(QMainWindow, main_window.Ui_MainWindow):
         cursor.execute(command, row)
 
         db.commit()
+
+    def set_config(self):
+        print(self.configure.x)
+        self.configure.x = int(self.min_area_label.text())
+        print(self.configure.x)
+
 
 
 def main():

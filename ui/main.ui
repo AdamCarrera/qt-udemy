@@ -2097,6 +2097,24 @@ background-color: rgb(76, 86, 106);</string>
      <string>Refresh</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>580</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25 16pt &quot;Bahnschrift Light Condensed&quot;;
+color: rgb(129, 161, 193);
+background-color: rgb(76, 86, 106);</string>
+    </property>
+    <property name="text">
+     <string>Set Config</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
